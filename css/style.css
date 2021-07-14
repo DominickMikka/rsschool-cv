@@ -1,9 +1,26 @@
-.main {
-  margin: 0 auto;
-  width: 500px;
+body {
   font-family: sans-serif;
 }
 
-.text-align-center{
+footer {
+  margin: 0 auto;
+  width: 320px;
+  display: flex;
+}
+
+.main {
+  margin: 0 auto;
+  width: 320px;
+}
+
+.text-align-center {
   text-align: center;
+}
+
+.avatar-image {
+  border-radius: 150px;
+}
+
+.email-link {
+  color: #000000;
 }
