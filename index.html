@@ -12,25 +12,64 @@
     <h1 class="text-align-center">Mikhail Darozhka</h1>
     <h2 class="text-align-center">Minsk, Belarus</h2>
     <p class="text-align-center"><img class="avatar-image" src="./img/photo.jpg" alt="photo" width="250" height="250" /></p>
-    <p><strong>E-mail:</strong></p>
-    <ul>
-      <li><a class="email-link" href="mailto:dominick.alone@gmail.com">dominick.alone@gmail.com</a></li>
-    </ul>
-    <p><strong>About me:</strong> I'm a seo-specialist now. I want to become a front-end developer.</p>
-    <p><strong>Technical skills:</strong></p>
-    <ul>
-      <li>JavaScript</li>
-      <li>HTML</li>
-      <li>CSS</li>
-    </ul>
-    <p><strong>Experience:</strong></p>
-    <ul>
-      <li>4 years - SEO Specialist</li>
-      <li>4 years - Content manager, support specialist for websites </li>
-      <li>1 month - Web-developer  </li>
-    </ul>
-    <p><strong>Education:</strong> Grodno College of light industry, programmer</p> 
-    <p><strong>English level:</strong> A1</p>
+    <section>
+      <h3>Contacts:</h3>
+      <ul>
+        <li>E-mail: <a class="email-link" href="mailto:dominick.alone@gmail.com">dominick.alone@gmail.com</a></li>
+        <li>Discord: DominickMikka</li>
+      </ul>
+    </section>
+    <section>
+      <h3>About me</h3>
+      <p>I'm a seo-specialist now. I want to become a front-end developer.</p>
+    </section>
+    <section>
+      <h3>Technical skills</h3>
+      <ul>
+        <li>JavaScript</li>
+        <li>HTML</li>
+        <li>CSS</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Experience</h3>
+      <ul>
+        <li>4 years - SEO Specialist</li>
+        <li>4 years - Content manager, support specialist for websites </li>
+        <li>1 month - Web-developer  </li>
+      </ul>
+    </section>
+    <section>
+      <h3>Education:</h3> 
+      <p>Grodno College of light industry, programmer</p>
+    </section>
+    <section>
+      <h3>English level:</h3>
+      <p>A1</p>
+    </section>
+    <section>
+      <h3>Code example</h3>
+      <details>
+          <summary>Code</summary>
+            <pre>
+              function maskify(cc) {
+                if (cc.length &lt;= 4) {
+                  return cc;
+                }
+              
+                let lengthStr = 0;
+                let string = '';
+                let replacer = '';
+              
+                lengthStr = cc.length;
+                string = cc.substring(lengthStr - 4);
+                replacer = '#'.repeat(lengthStr - 4);
+              
+                return `${replacer}${string}`;
+              }
+            </pre>
+      </details>
+    </section>
   </main>
   <footer>
     <a href="https://github.com/DominickMikka" target="_blank"><img src="./img/github.png" alt="github" width="50" /></a>
