@@ -1,80 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./svg/favicon.svg" />
+  <link href="./css/normalize.css" rel="stylesheet" />
+  <link href="./css/style.css" rel="stylesheet" />
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV Mikhail Darozhka</title>
 </head>
 <body>
-  <main class="main">
-    <h1 class="text-align-center">Mikhail Darozhka</h1>
-    <h2 class="text-align-center">Minsk, Belarus</h2>
-    <p class="text-align-center"><img class="avatar-image" src="./img/photo.jpg" alt="photo" width="250" height="250" /></p>
-    <section>
-      <h3>Contacts:</h3>
-      <ul>
-        <li>E-mail: <a class="email-link" href="mailto:dominick.alone@gmail.com">dominick.alone@gmail.com</a></li>
-        <li>Discord: DominickMikka</li>
-      </ul>
-    </section>
-    <section>
-      <h3>About me</h3>
-      <p>I'm a seo-specialist now. I want to become a front-end developer.</p>
-    </section>
-    <section>
-      <h3>Technical skills</h3>
-      <ul>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </section>
-    <section>
-      <h3>Experience</h3>
-      <ul>
-        <li>4 years - SEO Specialist</li>
-        <li>4 years - Content manager, support specialist for websites </li>
-        <li>1 month - Web-developer  </li>
-      </ul>
-    </section>
-    <section>
-      <h3>Education:</h3> 
-      <p>Grodno College of light industry, programmer</p>
-    </section>
-    <section>
-      <h3>English level:</h3>
-      <p>A1</p>
-    </section>
-    <section>
-      <h3>Code example</h3>
-      <details>
-          <summary>Code</summary>
-            <pre>
-              function maskify(cc) {
-                if (cc.length &lt;= 4) {
-                  return cc;
+    <nav>
+      <div class="wrapper">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Skills</a></li>
+          <li><a href="#">Experience</a></li>
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Code example</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="main">
+      <div class="wrapper">
+        <aside class="left-column">
+          <p class="foto"><img class="avatar-image" src="./img/photo.jpg" alt="photo" width="250" height="250" /></p>
+          <h1 class="name-title">Mikhail Darozhka</h1>
+          <h2>Junior Frontend Developer</h2>
+          <h3>Minsk, Belarus</h3>
+
+          <h4 class="contacts-title">Contacts:</h4>
+
+          <ul>
+            <li>E-mail: <a class="email-link" href="mailto:dominick.alone@gmail.com">dominick.alone@gmail.com</a></li>
+            <li>Discord: DominickMikka</li>
+          </ul>
+        </aside>
+        <div class="right-column">
+      <section>
+        <h3>About me</h3>
+        <p>I work as a SEO specialist. I want to become a front-end developer.</p>
+      </section>
+      <section>
+        <h3>Technical skills</h3>
+        <ul>
+          <li>GIT</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Experience</h3>
+        <ul>
+          <li>4 years+ - SEO specialist.</li>
+          <li>4 years - Content manager, support specialist for websites.</li>
+          <li>1 month - Web-developer.</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Education</h3> 
+        <ul>
+          <li><a href="https://app.rs.school/certificate/l14ijjr9" target="_blank">2021 - THE ROLLING SCOPES SCHOOL (JS/FE PRE-SCHOOL)</a></li>
+          <li>Grodno College of light industry, programmer</li>
+        </ul>
+      </section>
+      <section>
+        <h3>English level</h3>
+        <p>A1</p>
+      </section>
+      <section>
+        <h3>Code example</h3>
+        <details>
+            <summary>Code</summary>
+              <pre>
+                function maskify(cc) {
+                  if (cc.length &lt;= 4) {
+                    return cc;
+                  }
+                
+                  let lengthStr = 0;
+                  let string = '';
+                  let replacer = '';
+                
+                  lengthStr = cc.length;
+                  string = cc.substring(lengthStr - 4);
+                  replacer = '#'.repeat(lengthStr - 4);
+                
+                  return `${replacer}${string}`;
                 }
-              
-                let lengthStr = 0;
-                let string = '';
-                let replacer = '';
-              
-                lengthStr = cc.length;
-                string = cc.substring(lengthStr - 4);
-                replacer = '#'.repeat(lengthStr - 4);
-              
-                return `${replacer}${string}`;
-              }
-            </pre>
-      </details>
-    </section>
-  </main>
-  <footer>
-    <a href="https://github.com/DominickMikka" target="_blank"><img src="./img/github.png" alt="github" width="50" /></a>
-    <a href="https://rs.school/js/" target="_blank"><img src="./img/rs_school_js.svg" alt="rs school" width="135" /></a>
-    <span>2021</span>
-  </footer>
+              </pre>
+        </details>
+      </section>
+    </div>
+    </div>
+    </main>
+    <footer>
+      <div class="wrapper">
+        <a href="https://github.com/DominickMikka" target="_blank"><img src="./img/github.png" alt="github" width="50" /></a>
+        <a href="https://rs.school/js/" target="_blank"><img src="./img/rs_school_js.svg" alt="rs school" width="135" /></a>
+        <span>2021</span>
+      </div>
+    </footer>
 </body>
 </html>
