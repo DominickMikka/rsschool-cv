@@ -1,11 +1,11 @@
-:root {
-  --transition: 2s;
-}
-
 @font-face {
   font-family: Roboto;
   src: url(../fonts/Roboto-Regular.ttf);
   font-weight: 400;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,12 +13,14 @@ body {
 }
 
 nav {
-  background: #EEEEEE;
+  background: #000;
   padding: 10px 0;
-  box-shadow: 0px 0px 4.5px #000;
-  position: fixed;
   width: 100%;
   top: 0;
+}
+
+a {
+  color: #000;
 }
 
 nav ul{
@@ -29,14 +31,13 @@ nav ul{
 }
 
 nav a {
-  color: #000;
-  font-weight: bold;
+  color: #fff;
   text-decoration: none;
   padding-right: 20px;
 }
 
 .wrapper {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -44,25 +45,26 @@ nav a {
   display: flex;
 }
 
-.main {
-  margin-top: 38px;
-}
-
 .left-column {
-  width: 35%;
+  max-width: 35%;
+  padding-right: 45px;
 }
 
 .right-column {
-  width: 65%;
+  max-width: 65%;
+  margin-top: 20px;
 }
 
 footer {
   display: flex;
+  background: #fff;
+  text-align: center;
 }
 
 .main section {
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   border: 1px solid #000;
+  padding-right: 10px;
 }
 
 .avatar-image{
@@ -74,22 +76,118 @@ footer {
 }
 
 .name-title {
-  background: #000;
-  color: #fff;
-  padding: 10px;
+  color: #000;
+  padding: 10px 0;
   text-transform: uppercase;
-  width: 305px;
-  text-align: center;
 }
 
-.foto {
-  text-align: center;
-}
-
-.right-column h3 {
+.right-column h5 {
   text-transform: uppercase;
   display: inline;
   background: #000;
   color: #fff;
   padding: 0 10px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.main section p {
+  padding-left: 10px;
+}
+
+.project-title {
+  display: block;
+  position: absolute;
+  z-index: 999;
+  background: #000;
+  text-align: center;
+  padding: 5px;
+  color: #fff;
+}
+
+.project a {
+  position: relative;
+  display: flex;
+}
+
+.project {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.technology {
+  font-weight: bold;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+pre code.hljs {
+  padding: 0 0 0 10px !important;
+  margin: 0;
+  background: none;
+}
+
+.email {
+  position: relative;
+  top: 6px;
+}
+
+.burger {
+  display: none;
+  margin-left: 15px;
+}
+
+
+
+@media (max-width: 650px) {
+  .main .wrapper {
+    display: inline;
+  }
+
+  .left-column {
+    max-width: 47%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .right-column {
+    max-width: 100%;
+  }
+
+  nav ul {
+    display: none;
+    padding-left: 15px;
+    position: absolute;
+    width: 100%;
+    background: #000;
+    padding-top: 20px;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  nav ul li{
+    padding-bottom: 10px;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .left-column {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .project img{
+    width: 180px;
+  }
+
+  pre code.hljs {
+    padding: 0 0 0 0 !important;
+  }
 }
