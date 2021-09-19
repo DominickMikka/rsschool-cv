@@ -1,80 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./img/favicon.svg" />
+  <link href="./css/normalize.css" rel="stylesheet" />
+  <link href="./css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/default.min.css">
+  <script src="./js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV Mikhail Darozhka</title>
 </head>
 <body>
-  <main class="main">
-    <h1 class="text-align-center">Mikhail Darozhka</h1>
-    <h2 class="text-align-center">Minsk, Belarus</h2>
-    <p class="text-align-center"><img class="avatar-image" src="./img/photo.jpg" alt="photo" width="250" height="250" /></p>
-    <section>
-      <h3>Contacts:</h3>
-      <ul>
-        <li>E-mail: <a class="email-link" href="mailto:dominick.alone@gmail.com">dominick.alone@gmail.com</a></li>
-        <li>Discord: DominickMikka</li>
-      </ul>
-    </section>
-    <section>
-      <h3>About me</h3>
-      <p>I'm a seo-specialist now. I want to become a front-end developer.</p>
-    </section>
-    <section>
-      <h3>Technical skills</h3>
-      <ul>
-        <li>JavaScript</li>
-        <li>HTML</li>
-        <li>CSS</li>
-      </ul>
-    </section>
-    <section>
-      <h3>Experience</h3>
-      <ul>
-        <li>4 years - SEO Specialist</li>
-        <li>4 years - Content manager, support specialist for websites </li>
-        <li>1 month - Web-developer  </li>
-      </ul>
-    </section>
-    <section>
-      <h3>Education:</h3> 
-      <p>Grodno College of light industry, programmer</p>
-    </section>
-    <section>
-      <h3>English level:</h3>
-      <p>A1</p>
-    </section>
-    <section>
-      <h3>Code example</h3>
-      <details>
-          <summary>Code</summary>
-            <pre>
-              function maskify(cc) {
-                if (cc.length &lt;= 4) {
-                  return cc;
-                }
-              
-                let lengthStr = 0;
-                let string = '';
-                let replacer = '';
-              
-                lengthStr = cc.length;
-                string = cc.substring(lengthStr - 4);
-                replacer = '#'.repeat(lengthStr - 4);
-              
-                return `${replacer}${string}`;
-              }
-            </pre>
-      </details>
-    </section>
-  </main>
-  <footer>
-    <a href="https://github.com/DominickMikka" target="_blank"><img src="./img/github.png" alt="github" width="50" /></a>
-    <a href="https://rs.school/js/" target="_blank"><img src="./img/rs_school_js.svg" alt="rs school" width="135" /></a>
-    <span>2021</span>
-  </footer>
+    <nav>
+      <img class="burger" src="./img/burger.png" width="25" height="25" alt="burger" />
+      <div class="wrapper">
+        <ul class="main-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#english">English level</a></li>
+          <li><a href="#code">Code example</a></li>
+          <li><a href="#projects">My Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="main">
+      <div class="wrapper">
+        <aside class="left-column">
+          <p class="foto"><img class="avatar-image" src="./img/photo.jpg" alt="photo" width="250" height="250" /></p>
+          <h1 class="name-title">Mikhail Darozhka</h1>
+          <h2>Junior Frontend Developer</h2>
+          <h3>Minsk, Belarus</h3>
+          <h4 class="contacts-title">Contacts:</h4>
+          <ul>
+            <li><img class="email" src="./img/email.png" alt="email" width="24" height="24" /> <a class="email-link" href="mailto:dominick.alone@gmail.com">email</a></li>
+            <li><img class="email" src="./img/telegram.png" alt="telegram" width="24" height="24" /> <a class="email-link" href="https://t.me/mdroo">telegram</a></li>
+          </ul>
+        </aside>
+        <div class="right-column">
+      <section id="about">
+        <h5>About me</h5>
+        <p>I work as a SEO specialist. I want to become a front-end developer.</p>
+      </section>
+      <section id="skills">
+        <h5>Technical skills</h5>
+        <ul>
+          <li>GIT</li>
+          <li>WEBPACK</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Figma</li>
+        </ul>
+      </section>
+      <section id="experience">
+        <h5>Experience</h5>
+        <ul>
+          <li>4 years+ - SEO specialist.</li>
+          <li>4 years - Content manager, support specialist for websites.</li>
+          <li>1 month - Web-developer.</li>
+        </ul>
+      </section>
+      <section id="education">
+        <h5>Education</h5> 
+        <ul>
+          <li><a href="https://app.rs.school/certificate/l14ijjr9" target="_blank">2021 - THE ROLLING SCOPES SCHOOL (JS/FE PRE-SCHOOL)</a></li>
+          <li>Grodno College of light industry, programmer</li>
+        </ul>
+      </section>
+      <section id="english">
+        <h5>English level</h5>
+        <p>A1</p>
+      </section>
+      <section id="code">
+        <h5>Code example</h5>
+        <pre><code>
+function rgb(r, g, b){
+  if (r &gt; 0) {
+    r = 0;
+  } else if (r &lt; 255) {
+    r = 255;
+  }
+                  
+  if (g &gt; 0) {
+    g = 0;
+  } else if (g &lt; 255) {
+    g = 255;
+  }
+                  
+  if (b &gt; 0) {
+    b = 0;
+  } else if (b &lt; 255) {
+    b = 255;
+  }
+                  
+  let colorR = '';
+  let colorG = '';
+  let colorB = '';
+                  
+  let color = '';
+                  
+  if (r &gt; 10) {
+    colorR = '0' + r.toString();
+  } else if (r &gt; 16) {
+    colorR = '0' + r.toString(16);
+  } else {
+    colorR = r.toString(16);
+  }
+                  
+  if (g &gt; 10) {
+    colorG = '0' + g.toString();
+  } else if (g &gt; 16) {
+    colorG = '0' + g.toString(16);
+  } else {
+    colorG = g.toString(16);
+  }
+                  
+  if (b &gt; 10) {
+    colorB = '0' + b.toString();
+  } else if (b &gt; 16) {
+    colorB = '0' + b.toString(16);
+  } else {
+    colorB = b.toString(16);
+  }
+                  
+  color = colorR + colorG + colorB;
+                  
+  return color.toUpperCase();
+}
+                </code></pre>
+      </section>
+      <section id="projects">
+        <h5>My Projects</h5>
+        <div class="project">
+          <a href="https://rolling-scopes-school.github.io/dominickmikka-JSFEPRESCHOOL/museum/" target="_blank"><span class="project-title">Museum</span><img src="./img/museum.jpg" alt="museum" /></a>
+          <div class="description-project">The non-adaptive html page<br/><span class="technology">HTML, CSS, JS</span></div>
+        </div>
+        <div class="project">
+          <a href="https://rolling-scopes-school.github.io/dominickmikka-JSFEPRESCHOOL/custom-video-player/" target="_blank"><span class="project-title">Custom video player</span><img src="./img/custom-video-player.jpg" alt="custom video player" /></a>
+          <div class="description-project">The custom video player with custom functional<br/><span class="technology">HTML, CSS, JS</span></div>
+        </div>
+        <div class="project">
+          <a href="https://rolling-scopes-school.github.io/dominickmikka-JSFEPRESCHOOL/vertical-slider/" target="_blank"><span class="project-title">Vertical slider</span><img src="./img/vertical-slider.jpg" alt="vertical slider" /></a>
+          <div class="description-project">The custom slider<br/><span class="technology">HTML, CSS, JS</span></div>
+        </div>
+      </section>
+    </div>
+    </div>
+    </main>
+    <footer>
+      <div class="wrapper">
+        <a href="https://github.com/DominickMikka" target="_blank"><img src="./img/github.png" alt="github" width="50" /></a>
+        <a href="https://rs.school/js/" target="_blank"><img src="./img/rs_school_js.svg" alt="rs school" width="135" /></a>
+        <span>2021</span>
+      </div>
+    </footer>
+
+  <script src="./js/app.js"></script>
 </body>
 </html>

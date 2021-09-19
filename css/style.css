@@ -1,30 +1,194 @@
-body {
-  font-family: sans-serif;
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+  font-weight: 400;
 }
 
-footer {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Roboto;
+}
+
+nav {
+  background: #000;
+  padding: 10px 0;
+  width: 100%;
+  top: 0;
+}
+
+a {
+  color: #000;
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+.wrapper {
+  max-width: 960px;
   margin: 0 auto;
-  width: 320px;
+}
+
+.main .wrapper {
   display: flex;
 }
 
-.main {
-  margin: 0 auto;
-  width: 320px;
+.left-column {
+  max-width: 35%;
+  padding-right: 45px;
 }
 
-.main section {
-  margin-bottom: 10px;
+.right-column {
+  max-width: 65%;
+  margin-top: 20px;
 }
 
-.text-align-center {
+footer {
+  display: flex;
+  background: #fff;
   text-align: center;
 }
 
-.avatar-image {
+.main section {
+  margin-bottom: 40px;
+  border: 1px solid #000;
+  padding-right: 10px;
+}
+
+.avatar-image{
   border-radius: 150px;
 }
 
 .email-link {
   color: #000000;
+}
+
+.name-title {
+  color: #000;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-size: 29px;
+}
+
+.right-column h5 {
+  text-transform: uppercase;
+  display: inline;
+  background: #000;
+  color: #fff;
+  padding: 0 10px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.main section p {
+  padding-left: 10px;
+}
+
+.project-title {
+  display: block;
+  position: absolute;
+  z-index: 999;
+  background: #000;
+  text-align: center;
+  padding: 5px;
+  color: #fff;
+}
+
+.project a {
+  position: relative;
+  display: flex;
+}
+
+.project {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.technology {
+  font-weight: bold;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+pre code.hljs {
+  padding: 0 0 0 10px !important;
+  margin: 0;
+  background: none;
+}
+
+.email {
+  position: relative;
+  top: 6px;
+}
+
+.burger {
+  display: none;
+  margin-left: 15px;
+}
+
+
+
+@media (max-width: 650px) {
+  .main .wrapper {
+    display: inline;
+  }
+
+  .left-column {
+    max-width: 47%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .right-column {
+    max-width: 100%;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: #000;
+    padding-top: 20px;
+    text-indent: 15px;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  nav ul li{
+    padding-bottom: 10px;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .left-column {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .project img{
+    width: 180px;
+  }
+
+  pre code.hljs {
+    padding: 0 0 0 0 !important;
+  }
 }
